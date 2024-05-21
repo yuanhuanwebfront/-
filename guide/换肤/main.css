@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.content{
+  padding: 32px;
+}
+label{
+  padding-left: 12px;
+}
+
+.theme-text{
+  color: var(--color-primary);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./theme-default.css">
+  <link rel="stylesheet" href="./theme-red.css">
+  <link rel="stylesheet" href="./theme-green.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  
+  <div class="content">
+    <label for="default">
+      <input id="default" name="theme" class="theme-radio" type="radio" checked value="default">
+      <span>默认样式</span>
+    </label>
+
+    <label for="red">
+      <input id="red" name="theme" class="theme-radio" type="radio" value="red">
+      <span>红色样式</span>
+    </label>
+
+    <label for="green">
+      <input id="green" name="theme" class="theme-radio" type="radio" value="green">
+      <span>绿色样式</span>
+    </label>
+
+    <div style="margin-top: 60px;" class="theme-text">当前样式颜色</div>
+    
+  </div>
+
+</body>
+
+<script>
+
+  window.document.documentElement.setAttribute('data-theme', 'default')
+
+  var contentDom = document.querySelector('.content');
+
+  contentDom.addEventListener('change', function(e){
+
+    if(e.target.className == 'theme-radio'){
+      window.document.documentElement.setAttribute('data-theme', e.target.value)
+    }
+  })
+
+</script>
+</html>
